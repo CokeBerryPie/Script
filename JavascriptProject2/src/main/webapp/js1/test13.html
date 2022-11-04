@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js1/test13.html</title>
+<script type="text/javascript">
+// 내장함수 : 자바스크립트 언어를 만들때 미리 만들어놓은 함수
+// 내장함수 호출
+//alert("함수호출"); // alret 도 미리 만들어둔 함수에 값만 넣은 상태
+
+//confirm("선택하세요");
+//한번 더 확인 시켜주는 함수
+// => 확인 체크시 true 리턴, 취소 체크시 false 리턴
+// var a = confirm ("선택하세요");
+// //alert(a);
+// // if문에서 true 이면 "확인을 누름" , false 이면 "취소 누름"
+// if(a==true){
+// 	alert("확인을 누름")
+// }else{
+// 	alert("취소 누름")
+// }
+
+
+//prompt() // 대화 상자에서 값을 받아 출력 => 기본적으로 받는 값은 문자형
+
+// var b=prompt("입력하세요");
+
+// alert("입력받은 값 : " + b);
+// alert("입력받은 값에 100더하기 : " + (b+100));
+// alert("입력받은 값에 100곱하기 : " + (b*100));
+// // +는 문자열끼리의 연결자 역할도 함으로 값 문자+문자로 출력되지만
+// // *는 자동으로 형이 바뀌어 정수*정수가 되어 값 출력
+
+// //문자를 숫자로 변경해서 더하기 
+// // parseInt(숫자형태의 문자) => 숫자형태의 문자를 정수형으로 변경 
+// alert("입력받은 값에 숫자로 변경해서 100더하기 : " + (parseInt(b)+100))
+// alert("입력받은 값에 숫자로 변경해서 100곱하기 : " + ((b)*100))
+// //Nan => Not a Number -> 숫자가 아님, 문자임 ex.일 이 삼 등등..
+// //=> 문자와 숫자를 판별하는 함수 isNaN(문자 또는 숫자형태의 문자 또는 숫자)
+// // isNaN() -> 문자면 true, 숫자 또는 숫자형태의 문자 false
+// alert("문자,숫자 판별 : " + isNaN(b));
+// if (isNaN(b)==true){
+// 	alert("문자")
+// }else{
+// 	alert("숫자")
+// }
+
+//prompt() 대화상자를 통해 값을 입력 받아 isNaN(문자),숫자형태문자(혹은 숫자) 판별
+//if 문자이면 입력값받은 값 그대로 출력
+//   숫자이면 parseInt(입력 받은 값) +100 (숫자더하기)
+var b = prompt("입력하시오");
+if (isNaN(b)==true){
+	alert(b)
+}else{
+	alert((parseInt(b)+100))
+}
+	
+	//혹은 isNaN을 변수로 지정하여 if문 작성가능
+var b = prompt("입력하시오");
+var c = isNaN(c);
+if (c==true){
+	alert(b);
+}else{
+	alert(parseInt(b)+100);
+}
+
+// https://www.w3schools.com/
+
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

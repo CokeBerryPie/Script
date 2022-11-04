@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js_test/test1.html</title>
+<script type="text/javascript">
+ function fun01(){
+	  if(document.fr.name.value==""){
+		  alert("이름을 입력해주세요");
+		  documnet.fr.name.focus();
+		  return;
+		}
+	    if(document.fr.jumin1.length !=6){
+		 alert("주민등록번호 앞자리 6자 제한");
+		 document.fr.jumin1.focus();
+		 return;
+	  }
+	  if(document.fr.jumin2.legnth !=7){
+		alert("주민등록번호 뒷자리 7자 제한");
+		document.fr.jumin2.focus();
+		return;
+	  }
+	  if(document.fr.id.legnth < 4 && document.fr.id.length>10){
+		  alert("회원 ID의 길이는 4~10자로 제한");
+		  document.fr.id.focus();
+		  return;
+	  }
+	  if(document.fr.pw.length<4 && document.fr.pw.length>10){
+		 alert("비밀번호의 길이는 4~10자로 제한");
+		 document.fr.pw.focus();
+		 return;
+	  }
+	  if(document.fr.pw2.value!=="pw"){
+		  alert("비밀번호를 일치시켜 주세요");
+		  document.fr.pw2.focus();
+		  return;
+	  }
+	  }
+
+ 
+ function fun02(){
+	alert("중복확인완료");
+}
+ 
+</script>
+</head>
+<body>
+<form action="a.jsp" method="get" name="fr">
+	● 표시는 반드시 입력하셔야 합니다.<br>
+	● 이름 : <input type="text" name="name"> <br>
+	<br>
+	● 주민등록번호 : <input type="text" name="jumin1"> - <input type="text" name="jumin2"><br>
+	● 회원 ID : <input type="text" name="id"> 
+	<input type="submit" value="중복확인" onclick="fun02()">
+	<br><br>
+	● 비밀번호 : <input type="password" name="pw"><br>
+	● 비밀번호확인 : <input type="password" name="pw2"><br>
+	E-mail : <input type="email" name="mail"> <br>
+	● 전화번호 : <input type="tel" name="tel"> <br>
+	핸드폰번호 : <input type="tel" name="phone"> <br>
+	우편번호 : <input type="text" name="juso1"> - <input type="text" name="juso2">
+	<input type="button" value="검색" onclick="test2.html"> <br>
+			<input type="text" ><br>
+	상세주소 : <input type="text" name="juso3"> <br>
+	● 회원분류 : <select>
+				<option value="">선택해주십시오</option>
+	
+	  		 </select><br>
+	 <input type="button" value="가입" onclick="fun01()"> 
+	 <input type="button" value="취소" onclick="fun03()">
+	 <hr>
+</form>
+
+
+</body>
+</html>

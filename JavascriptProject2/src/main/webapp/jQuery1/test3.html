@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery1/test3.html</title>
+<script type="text/javascript" src="jquery-3.6.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+//		대상.함수()
+		var c=$('h1').css('color');
+// 		alert(c);
+		$('h1').css('color','blue');
+		$('h1').css('backgorund-color','skyblue');
+//		속성 여러개 적용시
+		$('h1').css({
+			'color':'red',
+			'background-color':'pink'
+			
+		});
+		// font weight = 폰트 굵기
+//		$('h1').css('font-weight',900);
+
+		// index h1 대상의 순서값
+		// 대상 여러개에 접근하여 적용
+		$('h1').css('color',function(index){
+			alert(index);
+			if(index==0){
+				return 'red';
+			}else if(index==1){
+			return 'green';
+			}else{
+				return 'blue';
+			}
+		});
+		// 자바 스크립트 배열
+		var arr=['pink','yellow','skyblue'];
+		$('h1').css('background-color',function(index){
+// 			alert(index);
+// 			alert(arr[index]);
+			return arr[index];
+		});
+
+	});
+
+
+</script>
+
+</head>
+<body>
+<h1> head-0 </h1>
+<h1> head-1 </h1>
+<h1> head-2 </h1>
+</body>
+</html>

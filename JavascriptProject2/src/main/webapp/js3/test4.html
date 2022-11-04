@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test4.html</title>
+
+<script type="text/javascript">
+//window - location // <- 주소 www...
+//- history // 방문기록
+//- document -imagem,div,... 
+//	 		 -form  -password, textarea, text
+//			 		-checkbox, radio
+//			 		-select	
+
+//document.form이름.목록상자이름 : form태그 목록상자 내장객체
+//document.form이름.목록상자이름.변수
+//=> document.form이름.목록상자이름.type 변수 : 목록상자 타입 저장
+//   document.form이름.목록상자이름.value 변수 : 목록상자 선택된 값 저장
+//   document.form이름.목록상자이름.selectedIndex 변수 : 목록상자이름에 선택된 값의 순서 저장
+
+//document.form이름.목록상자이름.함수() 
+//document.form이름.목록상자이름.focus() : 목록상자 포커스
+
+function fun01(){
+	alert(document.fr.se.type);
+ 	alert(document.fr.se.value);
+ 	alert(document.fr.se.selectedIndex);
+ 	document.fr.se.focus();
+}
+
+function fun02(){
+	//선택된 순서값 변경 0 1 2
+	document.fr.se.selectedIndex=2;
+}
+
+function fun03(){
+	// 선택된 목록의 value 값이 "" 이면 목록 선택하세요 출력,포커스,되돌아감
+// 	if(document.fr.se.value==""){
+// 		alert("목록을 선택하세요");
+// 		document.fr.se.focus();
+// 		return;
+// 	}
+	if(document.fr.se.selectedIndex==""){
+		alert("목록을 선택하세요!");
+		document.fr.se.focus();
+		return;
+	}
+	document.fr.submit();
+}
+</script>
+
+</head>
+
+<body>
+
+<form action="a.jsp" method="get" name="fr">
+<!-- size="3" multiple -->
+목록상자 : <select name="se">
+			<option value="">목록 선택하세요</option>
+			<option value="1">목록1</option>
+			<option value="2">목록2</option>
+			<option value="3">목록3</option>
+		 </select>
+
+<input type="button" value="정보확인" onclick="fun01()">
+<input type="button" value="정보변경" onclick="fun02()">
+<input type="button" value="제어" onclick="fun03()">
+</form>
+
+</body>
+</html>
